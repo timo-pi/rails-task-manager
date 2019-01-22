@@ -1,0 +1,13 @@
+<h1>Find a task by ID</h1>
+
+<% if @task.completed %>
+[X] <%= @task.title %>
+==>
+<%= @task.details%>
+<% else %>
+[  ] <%= @task.title %>
+==>
+<%= @task.details%>
+<% end %>
+<br>
+<%= link_to "back to index", tasks_path %>
